@@ -34,6 +34,5 @@ python scripts/train.py --model tf_efficientnetv2_s
 python scripts/evaluate.py
 
 ## Data
+This repo **does not include images**. See [data/README.md](data/README.md).
 
-This repo does not include images. See data/README.md
- for expected layout/CSV.
