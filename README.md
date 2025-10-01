@@ -66,9 +66,9 @@ This repo **does not include images**. See [data/README.md](data/README.md).
 ## Repo map
 ```pqsql
 notebooks/ … end-to-end pipeline 
-scripts/   … download, QC analysis, caching, splits, train, evaluate, predict demo
+scripts/   … download, QC analysis (EDA), pre-processing, splits, train, evaluate, predict demo
 configs/   … default.yaml (QC thresholds, training knobs)
-docs/      … report + figures
+docs/      … report + figures, test files
 ```
 ## Ethics and notes
 
@@ -81,6 +81,13 @@ Research/education only — not a medical device. Image-level splits (no patient
 
 
 ### Scripts
+**`scripts/download_data.py` (download and initial sanity check)**
+```python
+# downloads the dataset
+# unzips it
+# initial sanity check
+```
+
 **`scripts/qc_analyse.py` (basic EDA, computes blur/HF/contrast)**
 ```python
 # Basic EDA
