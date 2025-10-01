@@ -64,12 +64,12 @@ This repo **does not include images**. See [data/README.md](data/README.md).
 <img width="357" height="310" alt="image" src="https://github.com/user-attachments/assets/b2280480-0e66-4f4f-aee2-e280c315de0d" />
 
 ## Repo map
-
+```pqsql
 notebooks/ … end-to-end pipeline 
 scripts/   … download, QC analysis, caching, splits, train, evaluate, predict demo
 configs/   … default.yaml (QC thresholds, training knobs)
 docs/      … report + figures
-
+```
 ## Ethics and notes
 
 Research/education only — not a medical device. Image-level splits (no patient IDs available in this dataset). QC aims to reject unreadable frames and apply minimal, principled fixes.
