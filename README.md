@@ -36,3 +36,26 @@ python scripts/evaluate.py
 ## Data
 This repo **does not include images**. See [data/README.md](data/README.md).
 
+## Results
+
+<img width="497" height="61" alt="image" src="https://github.com/user-attachments/assets/d2927cbc-fd65-4451-a983-94c264a97277" />
+
+**Baseline Model Training Curves**
+<img width="544" height="762" alt="image" src="https://github.com/user-attachments/assets/cb3b3ad7-f0cb-4b82-a43e-c2a9e5f85070" />
+
+**tf_efficientnetv2_s Training Curves**
+<img width="538" height="762" alt="image" src="https://github.com/user-attachments/assets/2ca41fdf-95e8-40cf-bbf1-a49568816d4b" />
+
+**Confusion Matrix Test**
+<img width="539" height="455" alt="image" src="https://github.com/user-attachments/assets/19130527-3e4b-4183-afde-92e74caf2aac" />
+
+**Per-class Recall Test**
+<img width="1189" height="490" alt="image" src="https://github.com/user-attachments/assets/a1fba896-dea9-4967-8404-a8c24cb00125" />
+
+**Prediction on Random Pathology Images from Google Images Test**
+<img width="352" height="657" alt="image" src="https://github.com/user-attachments/assets/83fec40b-e2a5-45d0-9016-04c7a6c2e837" />
+<img width="357" height="310" alt="image" src="https://github.com/user-attachments/assets/b2280480-0e66-4f4f-aee2-e280c315de0d" />
+
+
+
+
