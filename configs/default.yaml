@@ -1,0 +1,22 @@
+img_size: 224
+batch_size: 32
+seed: 42
+split:
+  train: 0.75
+  val: 0.15
+  test: 0.10
+qc:
+  min_blur_var: 5        # drop if blur < 5
+  max_hf_energy: 22      # drop if HF > 22%
+  min_contrast: 25       # drop if contrast < 25
+  clahe_if_contrast_lt: 30
+  denoise_if_hf_gt: 18
+model:
+  backbones: [efficientnet_b0, tf_efficientnetv2_s]
+  drop_rate: 0.25
+  drop_path: 0.2
+train:
+  head_epochs: 2
+  ft_epochs: 30
+  patience: 3
+metric: macro_recall
