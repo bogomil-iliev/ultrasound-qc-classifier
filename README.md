@@ -109,7 +109,7 @@ Research/education only — not a medical device. Image-level splits (no patient
 
 
 
-**scripts/cache_preprocess.py (selective CLAHE / NL-means, resize 224)**
+**scripts/preprocess_splits.py (selective CLAHE / NL-means, resize 224)**
 ```python
 # drops frames failing thresholds (blur<5 OR hf>22 OR contrast<25)
 # for survivors: if contrast<30 apply CLAHE; if hf>18 apply fast NL-means
