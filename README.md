@@ -116,6 +116,8 @@ Research/education only — not a medical device. Image-level splits (no patient
 ```python
 # loads checkpoint; runs inference for a few example JPGs; prints top-1 + confidence
 ```
+### Citation
+[➡️ Cite this repository](./CITATION.cff)
 
 
 
