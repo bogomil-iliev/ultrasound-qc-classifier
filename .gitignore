@@ -205,3 +205,28 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- Project-specific: keep the repo lean & compliant ---
+# Data & outputs (never commit datasets, caches, logs, or checkpoints)
+data/
+runs/
+results/
+logs/
+checkpoints/
+models/
+
+# Large model files
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Notebooks & environments
+.ipynb_checkpoints/
+.venv/
+.env
+
+# OS/IDE odds-and-ends
+.DS_Store
+.vscode/
+
