@@ -63,6 +63,59 @@ This repo **does not include images**. See [data/README.md](data/README.md).
 
 <img width="357" height="310" alt="image" src="https://github.com/user-attachments/assets/b2280480-0e66-4f4f-aee2-e280c315de0d" />
 
+## Repo map
+
+notebooks/ … end-to-end pipeline 
+scripts/   … download, QC analysis, caching, splits, train, evaluate, predict demo
+configs/   … default.yaml (QC thresholds, training knobs)
+docs/      … report + figures
+
+## Ethics and notes
+
+Research/education only — not a medical device. Image-level splits (no patient IDs available in this dataset). QC aims to reject unreadable frames and apply minimal, principled fixes.
+
+## License
+**MIT**
+
+---
+
+
+### Scripts
+**`scripts/qc_analyse.py` (computes blur/HF/contrast & saves CSV)**
+```python
+# reads images under data/images/**.jpg, computes:
+# - Variance of Laplacian (blur)
+# - High-frequency energy (FFT proportion)
+# - RMS contrast
+# saves qc_metrics.csv with columns: path, blur_var, hp_energy, contrast
+```
+
+**scripts/cache_preprocess.py (selective CLAHE / NL-means, resize 224)**
+```python
+# loads qc_metrics.csv
+# drops frames failing thresholds (blur<5 OR hf>22 OR contrast<25)
+# for survivors: if contrast<30 apply CLAHE; if hf>18 apply fast NL-means
+# writes cached 224x224 PNGs to data/cache_224_gray/
+```
+
+**scripts/train.py**
+```python
+# trains EfficientNet-B0 and/or tf_efficientnetv2_s
+# two-stage: freeze head (2 epochs) -> full fine-tune (30 epochs, patience=3)
+# class-weighted CE, mixed precision, AdamW; logs macro-recall (torchmetrics)
+# saves best checkpoint and curves
+```
+
+**scripts/evaluate.py**
+```python
+# loads best checkpoint, computes macro-recall on test
+# plots confusion matrix & per-class recall to docs/figures
+```
+
+**scripts/predict_demo.py**
+```python
+# loads checkpoint; runs inference for a few example JPGs; prints top-1 + confidence
+```
 
 
 
