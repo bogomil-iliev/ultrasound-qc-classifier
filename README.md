@@ -81,14 +81,33 @@ Research/education only — not a medical device. Image-level splits (no patient
 
 
 ### Scripts
-**`scripts/qc_analyse.py` (computes blur/HF/contrast & saves CSV)**
+**`scripts/qc_analyse.py` (basic EDA, computes blur/HF/contrast)**
 ```python
+# Basic EDA
 # reads images under data/images/**.jpg, computes:
+# - resolution distributions
+# - grayscale vs. color analysis
 # - Variance of Laplacian (blur)
 # - High-frequency energy (FFT proportion)
 # - RMS contrast
-# saves qc_metrics.csv with columns: path, blur_var, hp_energy, contrast
 ```
+<img width="268" height="185" alt="image" src="https://github.com/user-attachments/assets/46b12c25-eeee-469a-b38d-b8bfdcb3c15a" />
+
+<img width="1125" height="590" alt="image" src="https://github.com/user-attachments/assets/b4cea03a-2d09-4270-86e6-c1a5e62271e0" />
+
+<img width="588" height="490" alt="image" src="https://github.com/user-attachments/assets/a195c6de-6b61-43ca-ae88-9f95e061b90b" />
+
+<img width="704" height="547" alt="image" src="https://github.com/user-attachments/assets/f8602d8e-8862-4511-8232-2b0ec73eafe2" />
+
+<img width="851" height="153" alt="image" src="https://github.com/user-attachments/assets/688d2a9e-0604-4a53-bcce-48e81d4abad9" />
+
+<img width="1590" height="390" alt="image" src="https://github.com/user-attachments/assets/d49d1574-77c7-40ea-8843-bbb6478e0505" />
+
+<img width="872" height="287" alt="image" src="https://github.com/user-attachments/assets/d5dd89f0-9ce0-4731-b6ed-cd4b00374d4e" />
+
+
+
+
 
 **scripts/cache_preprocess.py (selective CLAHE / NL-means, resize 224)**
 ```python
