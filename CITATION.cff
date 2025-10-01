@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it. See 'preferred-citation' for the assignment report."
+title: "Ultrasound QC Classifier: Data-centric EfficientNet baselines for gallbladder ultrasound"
+authors:
+  - family-names: "Iliev"
+    given-names: "Bogomil"
+repository-code: "https://github.com/bogomil-iliev/ultrasound-qc-classifier"
+url: "https://github.com/bogomil-iliev/ultrasound-qc-classifier"
+abstract: "Quality-controlled 9-class ultrasound classification with blur/noise/contrast gating, selective CLAHE/NL-means, and EfficientNet baselines in PyTorch. Macro-recall used for imbalance."
+keywords: ["computer vision", "medical imaging", "ultrasound", "quality control", "EfficientNet", "PyTorch", "Grad-CAM", "macro-recall", "data-centric AI"]
+license: "MIT"
+version: "0.1.0"           # update when you create a GitHub Release
+date-released: "2025-10-01"  # update to the actual release date (YYYY-MM-DD)
+
+preferred-citation:
+  type: report
+  title: "Applied AI (AIN7301) — Ultrasound QC Classifier"
+  authors:
+    - family-names: "Iliev"
+      given-names: "Bogomil"
+  year: 2025
+  institution: "University of Greater Manchester (Bolton)"
+  url: "https://github.com/bogomil-iliev/ultrasound-qc-classifier/blob/main/docs/ain7301_report.pdf"
+
+# If later mint a DOI (e.g., via Zenodo), add it here:
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXXX"
