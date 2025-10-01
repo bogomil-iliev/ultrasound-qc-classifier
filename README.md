@@ -32,3 +32,8 @@ python scripts/cache_preprocess.py    # selective CLAHE/NL-means, resize 224
 python scripts/make_splits.py         # writes split CSVs or lists
 python scripts/train.py --model tf_efficientnetv2_s
 python scripts/evaluate.py
+
+## Data
+
+This repo does not include images. See data/README.md
+ for expected layout/CSV.
